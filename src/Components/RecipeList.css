@@ -1,0 +1,119 @@
+/* General Styles */
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+}
+
+.recipe-card {
+  width: calc(30% - 20px);
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.recipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #fafafa;
+}
+
+/* Recipe Image */
+.recipe-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 4px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.recipe-image:hover {
+  transform: scale(1.05);
+}
+
+/* Card Body */
+.recipe-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.recipe-body .card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe-body .card-text {
+  color: #777;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Favorite Button */
+.favorite-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.favorite-button.active {
+  color: #fff;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.favorite-button:hover {
+  transform: scale(1.1);
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* View Recipe Button */
+.btn-primary {
+  background-color: #3498db;
+  border: none;
+  color: #fff;
+  padding: 0.7rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .recipe-card {
+    width: calc(45% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .recipe-card {
+    width: calc(100% - 20px);
+  }
+}
